@@ -1,90 +1,74 @@
-<!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title>IA: Réseaux Bayésiens</title>
-		<meta name="description" content="TODO une phrase résumant le contenu de votre page"/>
-		<meta name="author" content="TODO prénom et nom des auteurs, séparés par une virgule: Jean Dupont, Marc Lemoi"/>
-		<meta name="keywords" content="TODO compléter la iste des mots-clefs: Intelligence artificielle, CPE, ..."/>
-		<meta name="revisit-after" content="7 days"/>
-		<meta name="robots" content="index,follow,all"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head>
+	<meta charset="utf-8">
+	<title>IA: Réseaux Bayésiens</title>
+	<meta name="description" content="TODO une phrase résumant le contenu de votre page"/>
+	<meta name="author" content="TODO prénom et nom des auteurs, séparés par une virgule: Jean Dupont, Marc Lemoi"/>
+	<meta name="keywords" content="TODO compléter la iste des mots-clefs: Intelligence artificielle, CPE, ..."/>
+	<meta name="revisit-after" content="7 days"/>
+	<meta name="robots" content="index,follow,all"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-		<link rel="stylesheet" href="../stylesheets/ia.css"/>
-		<link rel="icon" href="images/favicon.ico"/>		
-	</head>
+	<link rel="stylesheet" href="../stylesheets/ia.css"/>
+	<link rel="icon" href="images/favicon.ico"/>		
+</head>
+	
+<body>
+	<header>
+		<h1>Les réseaux Bayésiens</h1>
+	</header>
+	<nav id="menu">
+		<!-- ne rien inscrire ici -->
+	</nav> 
+	<main id="principal">
+		<div id="access">
+			<ul id="accesskeys">
+				<li><a href="#menu" accesskey="m">Accès menu (accesskey m)</a></li>
+				<li><a href="#principal" accesskey="p">Accès contenu principal (accesskey p)</a></li>
+				(TODO: ajouter des liens vers vos sous parties si vous le souhaitez)</li>
+			</ul>
+		</div>
+		<div id="content">
+			<h2>Résumé</h2>
+			<p>Modèles de représentation des connaissances, fondés sur une 
+description graphique des variables aléatoires</p>
+			<p>Pour citer une source, utilisez la balise "cite": d'après le cours d'IA <cite><a href="#bm2014">[bm2014]</a></cite>, ......</p>
+			<p>Tout texte doit être encadré par des balises (p, span, etc.).</p>
+			<p>Ne pas utiliser br.</p>
+			<p>Ne pas utiliser la balise b (gras) mais strong: <b>non</b> <strong>oui</strong>.</p>
+			<p>Ne pas utiliser la balise i (italique) mais em (emphase): <i>non</i> <em>oui</em>.</p> 
+			<h2>Préambules</h2>
+			<p></p>
+			<h2>Origines</h2>
+			<p>
+			Le théorème de Bayes est utilisé dans l’inférence statistique pour mettre à jour ou actualiser les estimations d’une probabilité ou d’un paramètre quelconque, à partir des observations et des lois de probabilité de ces observations. Il y a une version discrète et une version continue du théorème.
 
-	<body>
-		<header>
-			<h1>Les réseaux Bayésiens</h1>
-		</header>
-		<nav id="menu">
-			<!-- ne rien inscrire ici -->
-		</nav> 
-		<main id="principal">
-			<div id="access">
-				<ul id="accesskeys">
-					<li><a href="#menu" accesskey="m">Accès menu (accesskey m)</a></li>
-					<li><a href="#principal" accesskey="p">Accès contenu principal (accesskey p)</a></li>
-					<li>(TODO: ajouter des liens vers vos sous parties si vous le souhaitez)</li>
-				</ul>
-			</div>
-			<div id="content">
-				<h2>Résumé</h2>
-				<p>Modèles de représentation des connaissances, fondés sur une 
-					description graphique des variables aléatoires</p>
-				<p>Pour citer une source, utilisez la balise "cite": d'après le cours d'IA <cite><a href="#bm2014">[bm2014]</a></cite>, ......</p>
-				<p>Tout texte doit être encadré par des balises (p, span, etc.).</p>
-				<p>Ne pas utiliser br.</p>
-				<p>Ne pas utiliser la balise b (gras) mais strong: <b>non</b> <strong>oui</strong>.</p>
-				<p>Ne pas utiliser la balise i (italique) mais em (emphase): <i>non</i> <em>oui</em>.</p> 
-				<h2>Préambules</h2>
-				<p>L'inférence bayésienne est une méthode d'inférence permettant de déduire la probabilité d'un événement à partir de celles d'autres événements déjà évalués. C'est pourquoi on peut qualifier cette méthode d'empirique. Elle s'appuie principalement sur le théorème de Bayes.</p>
-				<p>Dans la logique d'Aristote développée dans l'algèbre de Boole et le calcul des propositions, une proposition ne peut être que vraie ou fausse, et les règles d'inférence ne font intervenir que ces deux valeurs.</p>
-				<p>Le raisonnement bayésien s'intéresse aux cas où une proposition pourrait être vraie ou fausse, non pas en raison de son rapport logique à des axiomes tenus pour assurément vrais, mais selon des observations où subsiste une incertitude. On attribue à toute proposition une valeur entre 0 (faux à coup sûr) et 1 (vrai à coup sûr). S'il s'agit d'un événement pouvant avoir plus de deux issues possibles, on considère la distribution de probabilité de ces issues. L'inférence bayésienne révise la probabilité des propositions au fur et à mesure des observations, incluant, dans l'analyse de Thomas Bayes qui lui donne son nom, la première opinion (a priori) sur la probabilité des prémisses.</p>
-
-				<p>Le raisonnement bayésien interprète la probabilité comme la traduction numérique d'un état de connaissance, du degré de confiance accordé à une hypothèse (voir le théorème de Cox-Jaynes). Jaynes utilisait à ce sujet avec ses étudiants la métaphore d'un robot à logique inductive. Pour les autres disciplines des statistiques et des probabilités, il s'agit du passage à la limite de la fréquence d'un événement.</p>
-				<h2>Origines</h2>
-				<p>
-				<p>Les réseaux Bayésiens sont nommés en référence au travaux du mathématicien Thomas Bayes.</p>
-				<p>Le théorème de Bayes appelé aussi « probabilité des causes » découle des probabilités conditionnelles et des probabilités totales,</p>
-				<br/>
-				<p>En intelligence Artificielle les systèmes doivent être évolutif et apprendre de leurs expérience afin de comprendre les liens entre les causes et les effets dans le but de faire évoluer son comportement
-					en prenant la décision la plus approprié en fonction de son environnement. </p>
-
-
-				<h2>Principes</h2>
-				<p>Nous souhaiterions adapté les réseaux de Bayésiens au cas des fluctuations de la bourse</p>
-				<p>Vous pouvez utiliser des sous-parties si besoin: h3,h4 et h5 (pas de niveau >h5)
-				<h4>Grap orienté acyclique: construction des graphes</h4>
-				<h4>circulation de l'information(causalité)</h4>
-				<p>Dans un réseau bayésien la circulation de l'informations est représenter par le sens des arcs.
-					<em>(l'information est qualititative)</em></p>
-				<p>Elles représentent l'influence entre les différentes informations.</p>
-				<p>
-				<ul>
-					<li>connexion convergente: deux informations mène à la même conclusion</li>
-					<li>connexion en série: l'association de cause produit un effet</li>
-					<li>connexion divergente: une cause engendre deux effets distincts</li>
-				</ul>
-				<p>Un noeud dépend uniquement de ses parents</p>
-				<h4>Les inférences </h4>
-				<p></p>
-				<h2>Utilisations</h2>
-				<p>TODO comment et où l'approche a été utilisée, pourquoi</p>
-				<h2>Critique</h2>
-				<p>TODO quels sont les avantages et les inconvénients de cette approche?</p>
-				<h2>Bibliographie</h2>
-				<p>A classer par ordre alphabétique de référence</p>
-				<p>https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne</p>
-				<ul>
-					<li id="as2010"><emph>as2000:</emph>Alexandre Saidi, 2010: Titre, Revue, Editeur</li>
-					<li id="bm2014"><emph>bm2014:</emph> Bruno Mascret, 2014: Titre, Revue, Editeur</li>
-				</ul>
-			</div>
-		</main>
-		<footer>
-			<!-- ne rien inscrire ici -->
-		</footer>	
-	</body>
+<p>L’école bayésienne utilise les probabilités comme moyen de traduire numériquement un degré de connaissance. Dans cette optique, le théorème de Bayes peut s’appliquer à toute proposition, quelle que soit la nature des variables et indépendamment de toute considération ontologique.
+L’école fréquentiste utilise les propriétés de long terme de la loi des observations et ne considère pas de loi sur les paramètres, inconnus mais fixés.</p>
+			
+			</p>
+			<h2>Principes</h2>
+			<p>Nous souhaiterions adapté les réseaux de Bayésiens au cas des fluctuations de la bourse</p>
+			<p>Vous pouvez utiliser des sous-parties si besoin: h3,h4 et h5 (pas de niveau >h5)
+			<h4>Grap orienté acyclique: construction des graphes</h4>
+			<h4>circulation de l'information(causalité)</h4>
+			<h4>Les inférences </h4>
+			</p>
+			<h2>Utilisations</h2>
+			<p>TODO comment et où l'approche a été utilisée, pourquoi</p>
+			<h2>Critique</h2>
+			<p>TODO quels sont les avantages et les inconvénients de cette approche?</p>
+			<h2>Bibliographie</h2>
+			<p>A classer par ordre alphabétique de référence</p>
+			<ul>
+				<li id="as2010"><emph>as2000:</emph>Alexandre Saidi, 2010: Titre, Revue, Editeur</li>
+				<li id="bm2014"><emph>bm2014:</emph> Bruno Mascret, 2014: Titre, Revue, Editeur</li>
+				<li id="bm2014"><emph>web:</emph> http://www.hamiltoninstitute.com/application-du-theoreme-de-bayes-a-la-structure-des-marches/</li>
+			</ul>
+		</div>
+	</main>
+	<footer>
+		<!-- ne rien inscrire ici -->
+	</footer>	
+</body>
 </html>
