@@ -29,22 +29,22 @@
 					<li>(TODO: ajouter des liens vers vos sous parties si vous le souhaitez)</li>
 				</ul>
 			</div>
-		<div id="content">
-			<h2>Résumé</h2>
-			<p>Modèles de représentation des connaissances, fondés sur une 
-				description graphique des variables aléatoires</p>
-			
-			<h2>Préambules</h2>
-			<p>Un réseau bayésien est en informatique et en statistique un modèle graphique probabiliste représentant des variables aléatoires sous la forme d'un graphe orienté acyclique. Intuitivement, ils sont à la fois :</p>
-    			<ul>
-    				<li> Des modèles de représentation des connaissances;</li>
-    				<li> Des « machines à calculer » les probabilités conditionnelles;</li>
-    				<li> Une base pour des Systèmes d'aide à la décision.</li>
-    			</ul>
-			<p>Cette représentation graphique permet d'exprimer le modèle en question de façon plus intuitive et synthétique.</p>
-			<p>L'intérêt particulier des réseaux bayésiens est de tenir compte simultanément de connaissances a priori d'experts (dans le graphe) et de l'expérience contenue dans les données.</p>
-			<p>Les réseaux bayésiens permettent ainsi de décrire l'incertitude de faits, de construire des probabilités jointes, ainsi que de retrouver toutes les probabilités conditionnelles à partir de ces dernières.</p>
-			<p>Ces réseaux sont mathématiquement régis par le Théorème de Bayes que nous détaillerons plus bas.</p>
+			<div id="content">
+				<h2>Résumé</h2>
+				<p>Modèles de représentation des connaissances, fondés sur une 
+					description graphique des variables aléatoires</p>
+
+				<h2>Préambules</h2>
+				<p>Un réseau bayésien est en informatique et en statistique un modèle graphique probabiliste représentant des variables aléatoires sous la forme d'un graphe orienté acyclique. Intuitivement, ils sont à la fois :</p>
+				<ul>
+					<li> Des modèles de représentation des connaissances;</li>
+					<li> Des « machines à calculer » les probabilités conditionnelles;</li>
+					<li> Une base pour des Systèmes d'aide à la décision.</li>
+				</ul>
+				<p>Cette représentation graphique permet d'exprimer le modèle en question de façon plus intuitive et synthétique.</p>
+				<p>L'intérêt particulier des réseaux bayésiens est de tenir compte simultanément de connaissances a priori d'experts (dans le graphe) et de l'expérience contenue dans les données.</p>
+				<p>Les réseaux bayésiens permettent ainsi de décrire l'incertitude de faits, de construire des probabilités jointes, ainsi que de retrouver toutes les probabilités conditionnelles à partir de ces dernières.</p>
+				<p>Ces réseaux sont mathématiquement régis par le Théorème de Bayes que nous détaillerons plus bas.</p>
 
 				<h2>Origines</h2>
 				<p>
@@ -56,130 +56,141 @@
 					en prenant la décision la plus approprié en fonction de son environnement. </p>
 				<h2>Principes</h2>
 				<h4>Grap orienté acyclique: construction des graphes</h4>
-				<p>Les réseaux Bayésiens sont des modèles graphique probabiliste</p>
-				<p></p>
-				<h4>circulation de l'information(causalité)</h4>
-				<p>Dans un réseau bayésien la circulation de l'informations est représenter par le sens des arcs.
-					<em>(l'information est qualititative)</em></p>
-				<p>Elles représentent l'influence entre les différentes informations.</p>
-				<p>
+				<p>Les réseaux Bayésiens sont des modèles graphique probabiliste associé à une distribution jointe de probabilité</p>
+				<p>Les réseaux sont acyclique car les effets ne peuvent pas influencé les causes, ils sont également orientés afin de représenter les dépendances entre les variables</p>
+
+			
+					Pour construire un graph: 
 				<ul>
-					<li> Connexion convergente: deux informations mène à la même conclusion</li>
-					<li> Connexion en série: l'association de cause produit un effet</li>
-					<li> Connexion divergente: une cause engendre deux effets distincts</li>
+					<li>définr les variables et leurs modalité </li>
+					<li>établir les liens entre les varaibles </li>
+					<li>dresser les tables de probabilités à partir des données statistiques</li>
 				</ul>
-				<img style="width: 700px;height: auto;" src="images/connexion.png" alt="connexion"/>
-				<p>Un noeud dépend uniquement de ses parents</p>
-				<h4>Les inférences </h4>
-				<p></p>
+				
+				
+			<p></p>
+			<h4>circulation de l'information(causalité)</h4>
+			<p>Dans un réseau bayésien la circulation de l'informations est représenter par le sens des arcs.
+				<em>(l'information est qualititative)</em></p>
+			<p>Elles représentent l'influence entre les différentes informations.</p>
+			<p>
+			<ul>
+				<li> Connexion convergente: deux informations mène à la même conclusion</li>
+				<li> Connexion en série: l'association de cause produit un effet</li>
+				<li> Connexion divergente: une cause engendre deux effets distincts</li>
+			</ul>
+			<img style="width: 700px;height: auto;" src="images/connexion.png" alt="connexion"/>
+			<p>Un noeud dépend uniquement de ses parents</p>
+			<h4>Les inférences </h4>
+			<p></p>
 			<h2>Utilisation des réseaux bayésiens</h2>
 
-		<p>Il existe de nombreux domaine ou les réseaux bayésiens sont utilisés. Que ce soit dans le domaine de la médecine, de l’industrie, des finances et du droit. Nous allons prendre des exemples dans l’industrie et le droit.</p>
+			<p>Il existe de nombreux domaine ou les réseaux bayésiens sont utilisés. Que ce soit dans le domaine de la médecine, de l’industrie, des finances et du droit. Nous allons prendre des exemples dans l’industrie et le droit.</p>
 
-		<p>Dans l’industrie de l’électronique embarqué, l’utilisation de d’une Analyse de Mode de Défaillance et de leur Effet Critique est très prisé. </p><p>Cette analyse est basée sur le taux d’occurrence des modes des défaillances intrinsèques des composants électroniques. Ce taux d’occurrence sont données dans un recueil de données inventoriant l’ensemble des mécanismes de distribution des modes de pannes pour chaque type de composant électroniques. Ils sont référencés dans la norme Failure Mode/Mechanism Distributions databook .</p>
-		<br/>
-		<p>
-			Par exemple, le tableau ci-dessous donne les taux d’occurrence des modes de pannes pour un condensateur céramique (FMD-91)</p>
+			<p>Dans l’industrie de l’électronique embarqué, l’utilisation de d’une Analyse de Mode de Défaillance et de leur Effet Critique est très prisé. </p><p>Cette analyse est basée sur le taux d’occurrence des modes des défaillances intrinsèques des composants électroniques. Ce taux d’occurrence sont données dans un recueil de données inventoriant l’ensemble des mécanismes de distribution des modes de pannes pour chaque type de composant électroniques. Ils sont référencés dans la norme Failure Mode/Mechanism Distributions databook .</p>
+			<br/>
+			<p>
+				Par exemple, le tableau ci-dessous donne les taux d’occurrence des modes de pannes pour un condensateur céramique (FMD-91)</p>
 
-		<table><tbody>
-			<tr>
-				<th>Device Type</th>
-				<th>Failure Mode</th>
-				<th>Failure Mode Probability (%)</th>
-			</tr>
-			<tr>
-				<td>
-					Capacitor, Ceramic
-				</td><td>Court-circuit</td>
-				<td>0,49</td>
-			</tr>
-			<tr>
-				<td></td>
+			<table><tbody>
+				<tr>
+					<th>Device Type</th>
+					<th>Failure Mode</th>
+					<th>Failure Mode Probability (%)</th>
+				</tr>
+				<tr>
+					<td>
+						Capacitor, Ceramic
+					</td><td>Court-circuit</td>
+					<td>0,49</td>
+				</tr>
+				<tr>
+					<td></td>
 
-				<td>Change de valeur</td>
-				<td>0,29</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>Circuit ouvert</td>
-				<td>0,22</td>
-			</tr>
-			</tbody>
-		</table>
-		<p>		
-			Avec ces estimations de différents modes de défaillances et en se basant sur les schémas du système, il est possible de créer un réseau bayésien sur ce que pourrait produire une panne du composant sur l’ensemble des autres composants aux alentours.
-		</p>
-		<p>La réflexion est étendue aux dégâts qu’il pourrait causer au bloc fonctionnel auquel il est rattaché et au système tout entier. Ces dégâts peuvent aller d’un dysfonctionnement annexe non vital à la perte définitive du système.
-		</p>
-		<p>
-			Cette réflexion, qui part du défaut du composant jusqu’à la panne qu’elle provoque au système, s’oppose à une autre qui prend le chemin inverse : l’arbre de défaillance. On part du moment redouté et on déroule la réflexion sur ce qui a provoqué cette défaillance. Par exemple :</p>
-		<p>
-			Arbre de défaillance à mettre (dossier dropbox/image à intégrer/Arbre de défaillance)
-		</p>
-		<p>	
-			Ici, la Défaillance Redouté est provoquée par l’association de la Cause 1 avec la Cause 2. La Cause 1 a été provoquée soit par la Sous Cause 1 ou par la Sous Cause 2. Enfin, la Sous Cause 2 a été engendrée soit par le Composant B ou par le Composant C
+					<td>Change de valeur</td>
+					<td>0,29</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Circuit ouvert</td>
+					<td>0,22</td>
+				</tr>
+				</tbody>
+			</table>
+			<p>		
+				Avec ces estimations de différents modes de défaillances et en se basant sur les schémas du système, il est possible de créer un réseau bayésien sur ce que pourrait produire une panne du composant sur l’ensemble des autres composants aux alentours.
+			</p>
+			<p>La réflexion est étendue aux dégâts qu’il pourrait causer au bloc fonctionnel auquel il est rattaché et au système tout entier. Ces dégâts peuvent aller d’un dysfonctionnement annexe non vital à la perte définitive du système.
+			</p>
+			<p>
+				Cette réflexion, qui part du défaut du composant jusqu’à la panne qu’elle provoque au système, s’oppose à une autre qui prend le chemin inverse : l’arbre de défaillance. On part du moment redouté et on déroule la réflexion sur ce qui a provoqué cette défaillance. Par exemple :</p>
+			<p>
+				Arbre de défaillance à mettre (dossier dropbox/image à intégrer/Arbre de défaillance)
+			</p>
+			<p>	
+				Ici, la Défaillance Redouté est provoquée par l’association de la Cause 1 avec la Cause 2. La Cause 1 a été provoquée soit par la Sous Cause 1 ou par la Sous Cause 2. Enfin, la Sous Cause 2 a été engendrée soit par le Composant B ou par le Composant C
 
-		</p>
-		<p>
-			Dans le domaine du droit, les réseaux bayésien sont utilisés, lors d’un procès, afin d’aider à la décision du juge au vue des preuves, des témoignages, des fait et des expertises.
-		</p><p>
-		Durant un procès, il est possible d’émettre deux hypothèses sur une affaire :
-		</p>
-		<p>
-			Hp : Hypothèse du procureur, de l’accusation
-			Hd : Hypothèse de la défense
-		</p>
-		<p>
-			On se base sur la valeur de l’indice matériel, à l’aide du « rapport de vraisemblance », appelé aussi Likelihood ratio (LR) :
-		</p>
+			</p>
+			<p>
+				Dans le domaine du droit, les réseaux bayésien sont utilisés, lors d’un procès, afin d’aider à la décision du juge au vue des preuves, des témoignages, des fait et des expertises.
+			</p><p>
+			Durant un procès, il est possible d’émettre deux hypothèses sur une affaire :
+			</p>
+			<p>
+				Hp : Hypothèse du procureur, de l’accusation
+				Hd : Hypothèse de la défense
+			</p>
+			<p>
+				On se base sur la valeur de l’indice matériel, à l’aide du « rapport de vraisemblance », appelé aussi Likelihood ratio (LR) :
+			</p>
 
-		<img src="images/LR.gif" alt="LR"/>
-		<p>
-			I : Informations générales sur le cas, circonstances de l’affaire
-			E : Evidence, concordance entre une trace et le matériel de comparaison
-			P(E/Hp,I) : probabilité d’observer la preuve sachant l’hypothèse du procureur et les informations du cas
-			P(E/Hd,I) : probabilité d’observer la preuve sachant l’hypothèse de la défense et les informations du cas
-		</p>
-		<p>
-			Le résultat de ce calcul permettra de soutenir une des deux hypothèses mises en opposition : 
-		<ul>
-			<li>LR = 1 la preuve n’est pas pertinente, elle confirme les deux hypothèses</li>
-			<li>LR &lt; 1 la preuve soutien l’hypothèse de la défense Hd par rapport à Hp</li> 
-			<li>LR &gt; 1 la preuve soutien l’hypothèse du procureur Hp par rapport à Hd</li>
-		</ul>
-				
-				<h2>Critique</h2>
-				<h3>Avantages</h3>
-				<ul>
-					<li> La base de données relativement riche pour l’apprentissage;</li>
-					<li> La représentation des connaissances par liens entre causes et effets est souvent plus naturelle que la représentation par règles de production;</li>
-					<li> La représentation des connaissances est assez lisible (par opposition aux réseaux de neurones par exemple, ou aux arbres de décision);</li>
-					<li> Les types d'inférences réalisables à partir de la représentation sont très variés (diagnostic, effets, analyse de sensibilité, ...);</li>
-					<li> L'apprentissage est possible avec des données incomplètes et permet d'intégrer des connaissances hétérogènes;</li>
-					<li> Le modèle est évolutif;</li>
-					<li> Il s'agit d'un outil explicite de modélisation;</li>
-				</ul>
-				<h3>Limites</h3>
-				<ul>
-					<li> L'utilisation des probabilités et leur donnée par l'expert sont problématiques;</li>
-					<li> Il existe un problème de variables continues;</li>
-					<li> La complexité des algorithmes peut parfois poser problème;</li>
-					<li> Les tables de probabilité d’un noeud croient exponentiellement avec  le nombre de ses parents et leur nombre de modalité.</li>
-				</ul>
+			<img src="images/LR.gif" alt="LR"/>
+			<p>
+				I : Informations générales sur le cas, circonstances de l’affaire
+				E : Evidence, concordance entre une trace et le matériel de comparaison
+				P(E/Hp,I) : probabilité d’observer la preuve sachant l’hypothèse du procureur et les informations du cas
+				P(E/Hd,I) : probabilité d’observer la preuve sachant l’hypothèse de la défense et les informations du cas
+			</p>
+			<p>
+				Le résultat de ce calcul permettra de soutenir une des deux hypothèses mises en opposition : 
+			<ul>
+				<li>LR = 1 la preuve n’est pas pertinente, elle confirme les deux hypothèses</li>
+				<li>LR &lt; 1 la preuve soutien l’hypothèse de la défense Hd par rapport à Hp</li> 
+				<li>LR &gt; 1 la preuve soutien l’hypothèse du procureur Hp par rapport à Hd</li>
+			</ul>
 
-				<h2>Bibliographie</h2>
-				<p>A classer par ordre alphabétique de référence</p>
-				<p><a href="https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne">Réseau Bayésiens Wikipédia</a></p>
-				<p><a href="http://share.iscpif.fr/ideas2011/slides/Intro_RBD.pdf">Institut des systèmes complexe - Introduction aux réseaux
-					Bayésiens dynamiques</a></p>
-				<p><a href="http://www.math-info.univ-paris5.fr/~bouzy/Doc/AA1/ReseauxBayesiens.pdf">Réseau Bayésiens Bruno Bouzy</a></p>
+			<h2>Critique</h2>
+			<h3>Avantages</h3>
+			<ul>
+				<li> La base de données relativement riche pour l’apprentissage;</li>
+				<li> La représentation des connaissances par liens entre causes et effets est souvent plus naturelle que la représentation par règles de production;</li>
+				<li> La représentation des connaissances est assez lisible (par opposition aux réseaux de neurones par exemple, ou aux arbres de décision);</li>
+				<li> Les types d'inférences réalisables à partir de la représentation sont très variés (diagnostic, effets, analyse de sensibilité, ...);</li>
+				<li> L'apprentissage est possible avec des données incomplètes et permet d'intégrer des connaissances hétérogènes;</li>
+				<li> Le modèle est évolutif;</li>
+				<li> Il s'agit d'un outil explicite de modélisation;</li>
+			</ul>
+			<h3>Limites</h3>
+			<ul>
+				<li> L'utilisation des probabilités et leur donnée par l'expert sont problématiques;</li>
+				<li> Il existe un problème de variables continues;</li>
+				<li> La complexité des algorithmes peut parfois poser problème;</li>
+				<li> Les tables de probabilité d’un noeud croient exponentiellement avec  le nombre de ses parents et leur nombre de modalité.</li>
+			</ul>
 
-				<ul>
-				</ul>
+			<h2>Bibliographie</h2>
+			<p>A classer par ordre alphabétique de référence</p>
+			<p><a href="https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne">Réseau Bayésiens Wikipédia</a></p>
+			<p><a href="http://share.iscpif.fr/ideas2011/slides/Intro_RBD.pdf">Institut des systèmes complexe - Introduction aux réseaux
+				Bayésiens dynamiques</a></p>
+			<p><a href="http://www.math-info.univ-paris5.fr/~bouzy/Doc/AA1/ReseauxBayesiens.pdf">Réseau Bayésiens Bruno Bouzy</a></p>
+
+			<ul>
+			</ul>
 			</div>
 		</main>
-		<footer>
-			<!-- ne rien inscrire ici -->
-		</footer>	
+	<footer>
+		<!-- ne rien inscrire ici -->
+	</footer>	
 	</body>
 </html>
