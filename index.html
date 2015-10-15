@@ -72,8 +72,81 @@
 				<p>Un noeud dépend uniquement de ses parents</p>
 				<h4>Les inférences </h4>
 				<p></p>
-				<h2>Utilisations</h2>
-				<p>TODO comment et où l'approche a été utilisée, pourquoi</p>
+			<h2>Utilisation des réseaux bayésiens</h2>
+
+		<p>Il existe de nombreux domaine ou les réseaux bayésiens sont utilisés. Que ce soit dans le domaine de la médecine, de l’industrie, des finances et du droit. Nous allons prendre des exemples dans l’industrie et le droit.</p>
+
+		<p>Dans l’industrie de l’électronique embarqué, l’utilisation de d’une Analyse de Mode de Défaillance et de leur Effet Critique est très prisé. </p><p>Cette analyse est basée sur le taux d’occurrence des modes des défaillances intrinsèques des composants électroniques. Ce taux d’occurrence sont données dans un recueil de données inventoriant l’ensemble des mécanismes de distribution des modes de pannes pour chaque type de composant électroniques. Ils sont référencés dans la norme Failure Mode/Mechanism Distributions databook .</p>
+		<br/>
+		<p>
+			Par exemple, le tableau ci-dessous donne les taux d’occurrence des modes de pannes pour un condensateur céramique (FMD-91)</p>
+
+		<table><tbody>
+			<tr>
+				<th>Device Type</th>
+				<th>Failure Mode</th>
+				<th>Failure Mode Probability (%)</th>
+			</tr>
+			<tr>
+				<td>
+					Capacitor, Ceramic
+				</td><td>Court-circuit</td>
+				<td>0,49</td>
+			</tr>
+			<tr>
+				<td></td>
+
+				<td>Change de valeur</td>
+				<td>0,29</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Circuit ouvert</td>
+				<td>0,22</td>
+			</tr>
+			</tbody>
+		</table>
+		<p>		
+			Avec ces estimations de différents modes de défaillances et en se basant sur les schémas du système, il est possible de créer un réseau bayésien sur ce que pourrait produire une panne du composant sur l’ensemble des autres composants aux alentours.
+		</p>
+		<p>La réflexion est étendue aux dégâts qu’il pourrait causer au bloc fonctionnel auquel il est rattaché et au système tout entier. Ces dégâts peuvent aller d’un dysfonctionnement annexe non vital à la perte définitive du système.
+		</p>
+		<p>
+			Cette réflexion, qui part du défaut du composant jusqu’à la panne qu’elle provoque au système, s’oppose à une autre qui prend le chemin inverse : l’arbre de défaillance. On part du moment redouté et on déroule la réflexion sur ce qui a provoqué cette défaillance. Par exemple :</p>
+		<p>
+			Arbre de défaillance à mettre (dossier dropbox/image à intégrer/Arbre de défaillance)
+		</p>
+		<p>	
+			Ici, la Défaillance Redouté est provoquée par l’association de la Cause 1 avec la Cause 2. La Cause 1 a été provoquée soit par la Sous Cause 1 ou par la Sous Cause 2. Enfin, la Sous Cause 2 a été engendrée soit par le Composant B ou par le Composant C
+
+		</p>
+		<p>
+			Dans le domaine du droit, les réseaux bayésien sont utilisés, lors d’un procès, afin d’aider à la décision du juge au vue des preuves, des témoignages, des fait et des expertises.
+		</p><p>
+		Durant un procès, il est possible d’émettre deux hypothèses sur une affaire :
+		</p>
+		<p>
+			Hp : Hypothèse du procureur, de l’accusation
+			Hd : Hypothèse de la défense
+		</p>
+		<p>
+			On se base sur la valeur de l’indice matériel, à l’aide du « rapport de vraisemblance », appelé aussi Likelihood ratio (LR) :
+		</p>
+
+		<img src="images/LR.gif" alt="LR"/>
+		<p>
+			I : Informations générales sur le cas, circonstances de l’affaire
+			E : Evidence, concordance entre une trace et le matériel de comparaison
+			P(E/Hp,I) : probabilité d’observer la preuve sachant l’hypothèse du procureur et les informations du cas
+			P(E/Hd,I) : probabilité d’observer la preuve sachant l’hypothèse de la défense et les informations du cas
+		</p>
+		<p>
+			Le résultat de ce calcul permettra de soutenir une des deux hypothèses mises en opposition : 
+		<ul>
+			<li>LR = 1 la preuve n’est pas pertinente, elle confirme les deux hypothèses</li>
+			<li>LR &lt; 1 la preuve soutien l’hypothèse de la défense Hd par rapport à Hp</li> 
+			<li>LR &gt; 1 la preuve soutien l’hypothèse du procureur Hp par rapport à Hd</li>
+		</ul>
 				
 				<h2>Critique</h2>
 				<h3>Avantages</h3>
