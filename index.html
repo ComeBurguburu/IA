@@ -29,10 +29,32 @@
 					<li>(TODO: ajouter des liens vers vos sous parties si vous le souhaitez)</li>
 				</ul>
 			</div>
+<<<<<<< HEAD
 			<div id="content">
 				<h2>Résumé</h2>
 				<p>Modèles de représentation des connaissances, fondés sur une 
 					description graphique des variables aléatoires</p>
+=======
+		<div id="content">
+			<h2>Résumé</h2>
+			<p>Modèles de représentation des connaissances, fondés sur une 
+				description graphique des variables aléatoires</p>
+			
+			<h2>Préambules</h2>
+			<p>Un réseau bayésien est en informatique et en statistique un modèle graphique probabiliste représentant des variables aléatoires sous la forme d'un graphe orienté acyclique. Intuitivement, ils sont à la fois :</p>
+    			<p>	- des modèles de représentation des connaissances ;</p>
+    			<p>	- des « machines à calculer » les probabilités conditionnelles</p>
+			<p>	- une base pour des Système d'aide à la décision1</p>
+			<p>Cette représentation graphique permet d'exprimer le modèle en question de façon plus intuitive et synthétique.</p>
+			<p>L'intérêt particulier des réseaux bayésiens est de tenir compte simultanément de connaissances a priori d'experts (dans le graphe) et de l'expérience contenue dans les données.</p>
+			<h2>Origines</h2>
+			<p>
+			<p>Les réseaux Bayésiens sont nommés en référence au travaux du mathématicien Thomas Bayes.</p>
+			<p>Le théorème de Bayes appelé aussi « probabilité des causes » découle des probabilités conditionnelles et des probabilités totales,</p>
+			<br/>
+			<p>En intelligence Artificielle les systèmes doivent être évolutif et apprendre de leurs expérience afin de comprendre les liens entre les causes et les effets dans le but de faire évoluer son comportement
+				en prenant la décision la plus approprié en fonction de son environnement. </p>
+>>>>>>> origin/master
 
 				<h2>Préambules</h2>
 				<p></p>
@@ -45,6 +67,7 @@
 				<p>En intelligence Artificielle les systèmes doivent être évolutif et apprendre de leurs expérience afin de comprendre les liens entre les causes et les effets dans le but de faire évoluer son comportement
 					en prenant la décision la plus approprié en fonction de son environnement. </p>
 
+<<<<<<< HEAD
 				<h2>Principes</h2>
 				<h4>Grap orienté acyclique: construction des graphes</h4>
 				<p>Les réseaux Bayésiens sont des modèles graphique probabiliste</p>
@@ -81,6 +104,45 @@
 				<p><a href="http://share.iscpif.fr/ideas2011/slides/Intro_RBD.pdf">Institut des systèmes complexe - Introduction aux réseaux
 					Bayésiens dynamiques</a></p>
 				<ul>
+=======
+			<h2>Principes</h2>
+			<h4>Grap orienté acyclique: construction des graphes</h4>
+			<h4>circulation de l'information(causalité)</h4>
+			<p>Dans un réseau bayésien la circulation de l'informations est représenter par le sens des arcs.
+				<em>(l'information est qualititative)</em></p>
+			<p>Elles représentent l'influence entre les différentes informations.</p>
+			<p>
+			<ul>
+				<li>connexion convergente: deux informations mène à la même conclusion</li>
+				<li>connexion en série: l'association de cause produit un effet</li>
+				<li>connexion divergente: une cause engendre deux effets distincts</li>
+			</ul>
+			<img style="width: 700px;height: auto;" src="images/connexion.png" alt="connexion"/>
+			<p>Un noeud dépend uniquement de ses parents</p>
+			<h4>Les inférences </h4>
+			<p></p>
+			<h2>Utilisations</h2>
+			<p>TODO comment et où l'approche a été utilisée, pourquoi</p>
+			<h2>Critique</h2>
+			<h3>Avantages</h3>
+			<p>Base de données relativement riche pour l’apprentissage</p>
+			<p>La représentation des connaissances par liens entre causes et effets est souvent plus naturelle que la représentation par règles de production</p>
+			<p>La représentation des connaissances est assez lisible (par opposition aux réseaux de neurones par exemple, ou aux arbres de décision)</p>
+			<p>Les types d'inférences réalisables à partir de la représentation sont très variés (diagnostic, effets, analyse de sensibilité, ...)</p>
+			<p>Apprentissage avec des données incomplètes.</p>
+			<p>Modèle évolutif</p>
+			<p>Outil explicite de modélisation</p>
+			<p>Intégration de connaissances hétérogènes (Experts - données)</p>
+			<h3>Limites</h3>
+			<p>L'utilisation des probabilités et leur donnée par l'expert sont problématiques</p>
+			<p>Problème des variables continues</p>
+			<p>Complexité des algorithmes</p>
+			<p> Tables de probabilité d’un noeud croient exponentiellement avec  le nombre de ses parents et leur nombre de modalité</p>
+			<h2>Bibliographie</h2>
+			<p>A classer par ordre alphabétique de référence</p>
+			<p><a href="https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne">Réseau Bayésiens Wikipédia</a></p>
+			<ul>
+>>>>>>> origin/master
 
 				</ul>
 			</div>
