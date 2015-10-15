@@ -36,11 +36,16 @@
 			
 			<h2>Préambules</h2>
 			<p>Un réseau bayésien est en informatique et en statistique un modèle graphique probabiliste représentant des variables aléatoires sous la forme d'un graphe orienté acyclique. Intuitivement, ils sont à la fois :</p>
-    			<p>	- des modèles de représentation des connaissances ;</p>
-    			<p>	- des « machines à calculer » les probabilités conditionnelles</p>
-			<p>	- une base pour des Système d'aide à la décision1</p>
+    			<ul>
+    				<li> Des modèles de représentation des connaissances;</li>
+    				<li> Des « machines à calculer » les probabilités conditionnelles;</li>
+    				<li> Une base pour des Systèmes d'aide à la décision.</li>
+    			</ul>
 			<p>Cette représentation graphique permet d'exprimer le modèle en question de façon plus intuitive et synthétique.</p>
 			<p>L'intérêt particulier des réseaux bayésiens est de tenir compte simultanément de connaissances a priori d'experts (dans le graphe) et de l'expérience contenue dans les données.</p>
+			<p>Les réseaux bayésiens permettent ainsi de décrire l'incertitude de faits, de construire des probabilités jointes, ainsi que de retrouver toutes les probabilités conditionnelles à partir de ces dernières.</p>
+			<p>Ces réseaux sont mathématiquement régis par le Théorème de Bayes que nous détaillerons plus bas.</p>
+
 				<h2>Origines</h2>
 				<p>
 				<p>Les réseaux Bayésiens sont nommés en référence au travaux du mathématicien Thomas Bayes.</p>
@@ -69,21 +74,30 @@
 				<p></p>
 				<h2>Utilisations</h2>
 				<p>TODO comment et où l'approche a été utilisée, pourquoi</p>
+				
 				<h2>Critique</h2>
 				<h3>Avantages</h3>
+				<p>Base de données relativement riche pour l’apprentissage</p>
 				<p>La représentation des connaissances par liens entre causes et effets est souvent plus naturelle que la représentation par règles de production</p>
 				<p>La représentation des connaissances est assez lisible (par opposition aux réseaux de neurones par exemple, ou aux arbres de décision)</p>
 				<p>Les types d'inférences réalisables à partir de la représentation sont très variés (diagnostic, effets, analyse de sensibilité, ...)</p>
-				<p>Des méthodes d'apprentissages existent</p>
+				<p>Apprentissage avec des données incomplètes.</p>
+				<p>Modèle évolutif</p>
+				<p>Outil explicite de modélisation</p>
+				<p>Intégration de connaissances hétérogènes (Experts - données)</p>
 				<h3>Limites</h3>
 				<p>L'utilisation des probabilités et leur donnée par l'expert sont problématiques</p>
 				<p>Problème des variables continues</p>
 				<p>Complexité des algorithmes</p>
+				<p> Tables de probabilité d’un noeud croient exponentiellement avec  le nombre de ses parents et leur nombre de modalité</p>
+				
 				<h2>Bibliographie</h2>
 				<p>A classer par ordre alphabétique de référence</p>
 				<p><a href="https://fr.wikipedia.org/wiki/Inf%C3%A9rence_bay%C3%A9sienne">Réseau Bayésiens Wikipédia</a></p>
 				<p><a href="http://share.iscpif.fr/ideas2011/slides/Intro_RBD.pdf">Institut des systèmes complexe - Introduction aux réseaux
 					Bayésiens dynamiques</a></p>
+				<p><a href="http://www.math-info.univ-paris5.fr/~bouzy/Doc/AA1/ReseauxBayesiens.pdf">Réseau Bayésiens Bruno Bouzy</a></p>
+
 				<ul>
 				</ul>
 			</div>
