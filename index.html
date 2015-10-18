@@ -6,7 +6,7 @@
 		<meta name="description" content="Définitions et utilisations des Réseaux Bayésiens"/>
 		<meta name="author" content="Sébastien André, Côme Burguburu, Benjamin Jornet, Emilien Lasne, Raphaël Tata
 
-"/>
+									 "/>
 		<meta name="keywords" content="Intelligence artificielle, CPE, Réseau Bayésiens, probabilité, inférences, apprentissage"/>
 		<meta name="revisit-after" content="7 days"/>
 		<meta name="robots" content="index,follow,all"/>
@@ -54,10 +54,25 @@
 				<p>Le théorème de Bayes appelé aussi « probabilité des causes » découle des probabilités conditionnelles et des probabilités totales,</p>
 				<img src="images/formule_bayes.png" alt="formule_bayes"/>
 				<br/>
+				<h5>Exemple</h5>
+				<p> On applique le théorème de Bayes au dépistage d'une maladie </p>
+				<table>
+					<tr><th>test</th><th>positif</th><th>négatif</th></tr>
+					<tr><th>Patient malade</th><td>99%</td><td>1%</td></tr>
+					<tr><th>Patient sain</th><td>5%</td><td>95%</td></tr>
+				</table>
+				<p>La probabilité d'être atteint par la maladie est de 0,001</p>
+				<p>Désignons par A l’évènement « Le patient a contracté la maladie » et par B l’évènement « Le test est positif »</p>
+				<p>La probabilité qu'un patient sain soit testé positivement est de</p>
+				<img alt="calcul" src="images/faux_positifs.PNG"/>
+
+				<p>Ce résultat impressionnant est dû à une probabilité très faible du nombre de malade</p>
+				<p>(source Wikipédia)</p>
+				<br/>
 				<p>En intelligence Artificielle les systèmes doivent être évolutif et apprendre de leurs expérience afin de comprendre les liens entre les causes et les effets dans le but de faire évoluer son comportement
 					en prenant la décision la plus approprié en fonction de son environnement. </p>
 				<h2>Principes</h2>
-				<h4>Grap orienté acyclique: construction des graphes</h4>
+				<h4>Graphe orienté acyclique: construction des graphes</h4>
 				<p>Les réseaux Bayésiens sont des modèles graphique probabiliste associé à une distribution jointe de probabilité</p>
 				<p>Les réseaux sont acyclique car les effets ne peuvent pas influencé les causes, ils sont également orientés afin de représenter les dépendances entre les variables</p>
 
@@ -69,8 +84,6 @@
 					<li>dresser les tables de probabilités à partir des données statistiques</li>
 				</ul>
 
-
-				<p></p>
 				<h4>circulation de l'information(causalité)</h4>
 				<p>Dans un réseau bayésien la circulation de l'information est représentée par le sens des arcs.
 					<em>(l'information est qualitative)</em></p>
