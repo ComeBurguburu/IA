@@ -93,7 +93,48 @@
 				<img style="width: 700px;height: auto;" src="images/connexion.png" alt="connexion"/>
 				<p>Un noeud dépend uniquement de ses parents</p>
 				<h4>Les inférences </h4>
-				<p></p>
+				<h5>Définition</h5>
+				<p>L’inférence est un mouvement de pensé qui permet d’aller des origines aux conséquences, des principes à la conclusion. L’inférence implique forcement le recours à l’interprétation. 
+					Prenons l’exemple suivant : « Une camionnette de police se trouve devant la maison ». En lisant cette phrase il est fort probable que vous fassiez une inférence c’est-à-dire que vous pensiez à que quelqu’un dans la maison soit arrêté ou qu’il y a eu un cambriolage. L’inférence est le fait de rajouter une information à celle présente. Il existe plusieurs types d’inférences dont les principaux sont déductives, inductives, abductives. L’inférence bayésienne est un type d’inférence. 
+					L’inférence bayésienne est une méthode d’inférence permettant de déduire la probabilité d’un évènement à partir de celles d’autres évènements déjà connus.
+					L’inférence est basée sur l’énoncé du théorème de Bayes. Nous avons vu précédemment ce théorème que nous allons rappeler ici afin qu’il n’y ait pas de confusion quand aux explications. Nous parlons de probabilité à priori les probabilités dont nous avons fait l’hypothèse, elles ne sont pas vérifiées par l’expérience. Les calculs à posteriori se font grâce à un échantillon de tests qui fourni les données pour construire une courbe expérimentale. A partir de cette courbe nous pourront tracer et approcher la courbe théorique de probabilité. La formule donne :</p>
+				<img src="images/formule_bayes.png" alt="formule_bayes"/>
+				<p>P(A) : désigne la probabilité à priori de A  <br>
+					P(A|B) : désigne la probabilité à posteriori de A sachant B (ou encore de A sous condition B)  <br>
+					P(A∩B) : désigne la probabilité que A et B aient tous les deux lieu.  <br> <br>
+					Le théorème de Bayes permet d'inverser le lien entre probabilités. C'est-à-dire que si l'on connaît les conséquences d'une cause, l'observation des effets permet de remonter aux causes, c'est l'effet d'induction « bottom-up ». Sachant aussi qu’une lecture littérale du théorème de Bayes permet une induction « top-down », c'est à dire à partir des causes en déduire les conséquences. 
+				</p>
+				<h5>Algorithmes</h5>
+				<p>Les réseaux Bayésiens ont été crées afin de répondre à deux besoins. La prédiction et l’abduction. L’abduction est une forme de raisonnement où des hypothèses sont faites pour expliquer des observations. Les réseaux Bayésiens permettent de trouver une interprétation des observations avec des données connues. L’inférence probabiliste se résume à calculer la probabilité P(X|Y) avec X un ensemble d’observations et Y un ensemble de variables instanciées. <br><br>
+					Deux méthodes existent pour écrire les algorithmes d’inférences : Les méthodes complètes et approximatives.
+
+				</p>
+				<ul>
+					<li> Les méthodes complètes</li>
+					<li> Les méthodes approximative</li>
+				</ul>
+				<ul>
+					<li> Les méthodes complètes</li>
+				</ul>
+
+				<p>Les premiers algorithmes d’inférences pour les réseaux bayésiens sont basés sur une architecture à passage de messages et étaient limité aux arbres (Pearl 88). Le principe est que chaque nœud est associé à un processus et envoie un message de façon asynchrone à ses voisins jusqu'à qu’un équilibre soit atteint.  Désormais cette méthode est devenu un modèle de communication entre ordinateur et ou entre les processus. Cette méthode est utilisée par le protocole SOAP pour les webservices.
+					Cependant la méthode la plus commune dans les méthodes complètes est l’algorithme de l’arbre de jonction. Cette méthode est basée sur 2 grands principes de construction : La moralisation et la triangulation et doit avoir un nombre de clique maximal.<br><br>
+					Moralisation :<br>
+					<img src="images/Moralisation.png" width="650" height="270" alt="moralisation"/><br>
+					Triangulation : tout cycle de longueur au moins 4 doit contenir une corde (arête reliant deux sommets non consécutifs sur le cycle).<br>
+					<img src="images/Triangulation.png"  alt="triangulation"/><br>
+					Clique maximale = l’ajout d’un autre nœud à cette clique ne donne pas une clique.<br>
+					<img src="images/Clique.png"  width="650" height="270" alt="clique"/><br>
+				<ul>
+					<li> Les méthodes approximative</li>
+
+				</ul>
+				<p>La méthode approximative la plus connu et la plus utilisée est la méthode variationnelle. Cette méthode consiste à remplacer une distribution multidimensionnelle complexe par son meilleur représentant dans une famille plus simple de distributions, cette méthode est inexacte et ajoute de l’approximation mais à l’avantage d’être efficace et compréhensible par l’homme.  
+				</p>
+
+
+
+
 				<h4>Apprentissage des réseaux bayésiens</h4>
 				<p>Chaque événement est au départ  recensé  dans une table de donnée. Ce sont des données expérimentales.  A partir de là,   on établit des liens entre les événements que l’on représente à l’aide d’un graphe dit acyclique orienté. C'est-à-dire qu’il ne peut exister de boucle et que chaque nœud (ou événement) fils dépend  d’un nœud père. Seulement un  lien direct peut exister entre un événement B et un événement A.  </p>
 
