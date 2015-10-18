@@ -62,18 +62,18 @@
 				<p>Les réseaux sont acyclique car les effets ne peuvent pas influencé les causes, ils sont également orientés afin de représenter les dépendances entre les variables</p>
 
 
-				Pour construire un graph il faut: 
+				Pour construire un graphe il faut: 
 				<ul>
-					<li>définr les variables et leurs modalité </li>
-					<li>établir les liens entre les varaibles </li>
+					<li>définir les variables et leurs modalité </li>
+					<li>établir les liens entre les variables </li>
 					<li>dresser les tables de probabilités à partir des données statistiques</li>
 				</ul>
 
 
 				<p></p>
 				<h4>circulation de l'information(causalité)</h4>
-				<p>Dans un réseau bayésien la circulation de l'informations est représenter par le sens des arcs.
-					<em>(l'information est qualititative)</em></p>
+				<p>Dans un réseau bayésien la circulation de l'information est représentée par le sens des arcs.
+					<em>(l'information est qualitative)</em></p>
 				<p>Elles représentent l'influence entre les différentes informations.</p>
 				<p>
 				<ul>
@@ -86,7 +86,7 @@
 				<h4>Les inférences </h4>
 				<p></p>
 				<h4>Apprentissage des réseaux bayésiens</h4>
-				<p>Chaque événement est au départ  recensé  dans une table de donnée. Ce sont des données expérimentales.  A partir de là,   on établit des liens entre les événements que l’on représente à l’aide d’un graph dit acyclique orienté. C'est-à-dire qu’il ne peut exister de boucle et que chaque nœud (ou événement) fils dépend  d’un nœud père. Seulement un  lien direct peut exister entre un événement B et un événement A.  </p>
+				<p>Chaque événement est au départ  recensé  dans une table de donnée. Ce sont des données expérimentales.  A partir de là,   on établit des liens entre les événements que l’on représente à l’aide d’un graphe dit acyclique orienté. C'est-à-dire qu’il ne peut exister de boucle et que chaque nœud (ou événement) fils dépend  d’un nœud père. Seulement un  lien direct peut exister entre un événement B et un événement A.  </p>
 
 				<p>La distribution jointe : </p>
 				<img src="images/distribution.PNG" alt="formule distribution"/>
@@ -95,7 +95,7 @@
 					La probabilité d’un réseau définit par des événements  correspond au produit des probabilités conjointes de chaque événement. On exprime par  la probabilité d’un événement  sachant ses parents  .  C'est-à-dire la probabilité d’un nœud sachant celle des parents. </p>
 				<p>
 					La Loi de Markov : On remonte qu’à un rang au dessus i.e. au parent. Un fils ne dépend que de ses parents et non des générations précédentes. 
-					Ainsi, grâce au graph acyclique oriente crée, on peut ensuite faire le tableau de probabilité. On calcul chaque probabilité conjointes des fils sachant celle des parents. 
+					Ainsi, grâce au graphe acyclique oriente crée, on peut ensuite faire le tableau de probabilité. On calcul chaque probabilité conjointes des fils sachant celle des parents. 
 					Exemple :   Séisme /  Cambriolage </p>
 
 				<img src="images/alarme.png" alt="schema alarme"/>
@@ -108,8 +108,8 @@
 				<p>Calcul des probabilités jointes :</p>
 
 				<h5>1) Apprentissage des paramètres :</h5>
-				<p>A partir des données disponibles  (tableaux de donné), on cherche à calculer les lois de probabilité de chaque évènements. Ces derniers peuvent être complètes ou non.  
-					Une première approche consiste à calculer les probabilités selon la fréquence d’apparition d’un évènement dans la base de données.  Cette méthode est appelée maximum de vraisemblance, tel que :  </p>
+				<p>A partir des données disponibles  (tableaux de donné), on cherche à calculer les lois de probabilité de chaque événements. Ces derniers peuvent être complètes ou non.  
+					Une première approche consiste à calculer les probabilités selon la fréquence d’apparition d’un événement dans la base de données.  Cette méthode est appelée maximum de vraisemblance, tel que :  </p>
 				<img src="images/vraisemblance.PNG" alt="formule vraisemblance"/>
 				<p>
 					Dans la formule précédente N<sub>i,j,k</sub> est le nombre d’événements dans la base de données pour lesquels la variable  est dans l’état <sub>k</sub> et ses parents sont dans la configuration c<sub>j</sub>. 
@@ -127,7 +127,7 @@
 
 				<h5>2) Apprentissage de la structure :</h5>
 				<p>
-					L’apprentissage de la structure consiste à trouver des méthodes pour construire efficacement les graphs symbolisant les événements. 
+					L’apprentissage de la structure consiste à trouver des méthodes pour construire efficacement les graphes symbolisant les événements. 
 					Tout d’abord, à partir de n nœuds, le nombre de structures (NS)  possibles se définit par :  </p>
 				<img src="images/NS.PNG" alt="formule NS"/>
 				<p>
@@ -190,7 +190,7 @@
 				<p>
 					Cette réflexion, qui part du défaut du composant jusqu’à la panne qu’elle provoque au système, s’oppose à une autre qui prend le chemin inverse : l’arbre de défaillance. On part du moment redouté et on déroule la réflexion sur ce qui a provoqué cette défaillance. Par exemple :</p>
 				<p>
-					Arbre de défaillance à mettre (dossier dropbox/image à intégrer/Arbre de défaillance)
+					<img alt="arbre de défaillance" src="images/Arbre%20de%20d%C3%A9faillance.png"/>
 				</p>
 				<p>	
 					Ici, la Défaillance Redouté est provoquée par l’association de la Cause 1 avec la Cause 2. La Cause 1 a été provoquée soit par la Sous Cause 1 ou par la Sous Cause 2. Enfin, la Sous Cause 2 a été engendrée soit par le Composant B ou par le Composant C
@@ -229,7 +229,7 @@
 				<ul>
 					<li> La représentation des relations causales entre les variables d'un système est transparente et explicite;</li>
 					<li> Les réseaux bayésiens utilisent une grande variété de données en entrée;</li>					
-					<li> Il est possible de représenter des évènements incertains;</li>
+					<li> Il est possible de représenter des événements incertains;</li>
 					<li> Il existe des outils visuels d'aide à la décision;</li>
 					<li> L'apprentissage est possible avec des données incomplètes et permet d'intégrer des connaissances hétérogènes;</li>
 					<li> Le modèle est évolutif et accepte l'ajout de nouvelles données;</li>
@@ -243,7 +243,7 @@
 				<h3>Limites</h3>
 				<ul>
 					<li> Il est peut s'avérer difficile d'être d'accord avec les experts concernant la structure du réseau bayésien;</li>
-					<li> La table de probabilité conditionelle est compliquée à définir avec l'avis de l'expert; </li>
+					<li> La table de probabilité conditionnelle est compliquée à définir avec l'avis de l'expert; </li>
 					<li> Il existe un problème de représentation des variables continues, en effet car les probabilités sont discrètes et non continues;</li>
 					<li> Le modèle ne tient pas compte d'un temps ou d'un espace dynamique;</li>
 					<li> Il n'existe pas de boucles de rétroaction.</li>
